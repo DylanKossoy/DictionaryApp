@@ -95,7 +95,7 @@ body {
     top: 0;
     right: 15px;
    display: flex;
-   justify-content: cente;
+   justify-content: center;
    align-items: center;
    width: 100px;
    height: 60px;
@@ -109,6 +109,13 @@ body {
     top: 20px;
     right: 20px;
     width: 30px;
+}
+
+.word-synonym-list {
+    font-size: 25px;
+}
+.word-antonym-list {
+    font-size: 25px;
 }
 
 

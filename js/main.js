@@ -25,7 +25,7 @@ document.addEventListener('keydown', async ({ keyCode }) => {
     }
 
     
-    searchInput = ''
+    
 
 })
 
@@ -45,7 +45,13 @@ function updateUI(data) {
     let array = data[0]
     let word = document.querySelector('.word-selected')
     let wordDefinition = document.querySelector('.word-definition')
-    let searchInput = document.querySelector('.search-input').value
+    let searchInput = document.querySelector('.search-input')
+
+
+    let synList = document.querySelector('.word-synonym-list')
+    let antList = document.querySelector('.word-antonym-list')
+    synList.textContent = ''
+    antList.textContent = ''
 
 
     console.log(array)
@@ -58,7 +64,28 @@ function updateUI(data) {
         meaning.definitions.forEach(def => {
             wordDefinition.textContent += def.definition;
         })
+
+        meaning.synonyms.forEach((syn, i) => {
+            
+            
+            synList.textContent += i + ". " + syn + ', '
+        })
+
+        meaning.antonyms.forEach((ant, i) => {
+            
+            
+            antList.textContent += i + ". " + ant + ', '
+        })
+
+        
     })
+
+    
+
+
+
+
+    searchInput.value = ''
 
   
 
